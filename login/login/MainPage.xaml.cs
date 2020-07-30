@@ -60,7 +60,7 @@ namespace login
         //para q se active el button apartir de 3 caracteres
 
         // asignando la cantidad d caracteres
-        private bool ValidateField(string field) => !string.IsNullOrWhiteSpace(field) && field.Trim().Length >= 3;
+        private bool ValidateField(string field) => !string.IsNullOrWhiteSpace(field) && field.Trim().Length >= 5;
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e) => Xamarin.Essentials.Browser.OpenAsync("https//www.google.com");
 
