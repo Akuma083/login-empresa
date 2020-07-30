@@ -23,10 +23,8 @@ namespace login
             Empresa.Stroke = Color.FromHex("#ce6767");
         }
 
-        private void Entry_Unfocused(object sender, FocusEventArgs e)
-        {
-            Empresa.Stroke = Color.FromHex("#c7cdd2");
-        }
+        private void Entry_Unfocused(object sender, FocusEventArgs e) => Empresa.Stroke = Color.FromHex("#c7cdd2");
+
 
         private void Entry_Focused_1(object sender, FocusEventArgs e)
         {
@@ -47,5 +45,26 @@ namespace login
         {
             Password.Stroke = Color.FromHex("#c7cdd2");
         }
+
+        private void ModifyStrokeColor()
+        {
+
+        }
+        private void EntryTextChanged(object sender, TextChangedEventArgs e) => Validate();
+       
+        
+        private void Validate() => buttonlogin.IsEnabled = ValidateField(EntryEmpresa.Text)
+                && ValidateField(EntryPass.Text)
+                && ValidateField(EntryUser.Text);
+
+        //para q se active el button apartir de 3 caracteres
+
+        // asignando la cantidad d caracteres
+        private bool ValidateField(string field) => !string.IsNullOrWhiteSpace(field) && field.Trim().Length >= 3;
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e) => Xamarin.Essentials.Browser.OpenAsync("https//www.google.com");
+
+
     }
+
 }

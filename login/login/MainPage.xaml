@@ -1,48 +1,103 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             BackgroundColor="#F8F9F9"
-             x:Class="login.MainPage">
+<ContentPage
+    x:Class="login.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#F8F9F9"
+    mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="Margin" Value="6,0,0,0"/>
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="Margin" Value="6,0,0,0" />
             </Style>
         </ResourceDictionary>
 
     </ContentPage.Resources>
-        <ScrollView>
+    <ScrollView>
 
 
-        <StackLayout VerticalOptions="Center"  Padding="28.0" Spacing="12"
-        >
-        <!-- Place new controls here -->
-            <Label Text="Login"  FontSize="60" TextColor="#8700FF" Margin="0,0,0,24"
-                   />
+        <StackLayout
+            Padding="28.0"
+            Spacing="12"
+            VerticalOptions="Center">
+            <!--  Place new controls here  -->
+            <Label
+                Margin="0,0,0,24"
+                FontSize="60"
+                Text="Login"
+                TextColor="#8700FF" />
             <Grid>
-                <Rectangle x:Name="Empresa" Stroke ="#ce6767" StrokeThickness="1" Fill="White"/>
-                <Entry Placeholder="Empresa" Focused="Entry_Focused" Unfocused="Entry_Unfocused"/>
+                <Rectangle
+                    x:Name="Empresa"
+                    Fill="White"
+                    Stroke="#ce6767"
+                    StrokeThickness="1" />
+                <Entry
+                    x:Name="EntryEmpresa"
+                    Focused="Entry_Focused"
+                    Placeholder="Empresa"
+                    TextChanged="EntryTextChanged"
+                    Unfocused="Entry_Unfocused" />
             </Grid>
             <Grid>
-                <Rectangle x:Name="Usuario" Stroke="#c7cdd2" StrokeThickness="1" Fill="White"/>
-                <Entry Placeholder="Usuario" Keyboard="Email" Focused="Entry_Focused_1" Unfocused="Entry_Unfocused_1" PlaceholderColor="Gray"/>
-                </Grid>
-            <Grid>
-                <Rectangle x:Name="Password" Stroke="#c7cdd2" StrokeThickness="1" Fill="White"/>
-                <Entry Placeholder="Contraseña" IsPassword="True" Keyboard="Numeric" Focused="Entry_Focused_2" Unfocused="Entry_Unfocused_2"/>
+                <Rectangle
+                    x:Name="Usuario"
+                    Fill="White"
+                    Stroke="#c7cdd2"
+                    StrokeThickness="1" />
+                <Entry
+                    x:Name="EntryUser"
+                    Focused="Entry_Focused_1"
+                    Keyboard="Email"
+                    Placeholder="Usuario"
+                    PlaceholderColor="Gray"
+                    TextChanged="EntryTextChanged"
+                    Unfocused="Entry_Unfocused_1" />
             </Grid>
-            <Label Text="Olvidaste tu contraseña"  HorizontalOptions="End" Padding="0.10"
-               />
-        <Button Text="Entrar" FontSize="Large" BackgroundColor="#006EA8" TextColor="WhiteSmoke" BorderColor="#46718c" BorderWidth="0.1" HeightRequest="64" CornerRadius="62"
-                />
-        <Label Text="Declaración de Privacidad" TextDecorations="Underline" TextColor="#74469d" Margin="0.12" 
-               />
+            <Grid>
+                <Rectangle
+                    x:Name="Password"
+                    Fill="White"
+                    Stroke="#c7cdd2"
+                    StrokeThickness="1" />
+                <Entry
+                    x:Name="EntryPass"
+                    Focused="Entry_Focused_2"
+                    IsPassword="True"
+                    Keyboard="Numeric"
+                    Placeholder="Contraseña"
+                    TextChanged="EntryTextChanged"
+                    Unfocused="Entry_Unfocused_2" />
+            </Grid>
+            <Label
+                Padding="0.10"
+                HorizontalOptions="End"
+                Text="Olvidaste tu contraseña" />
+            <Button
+                x:Name="buttonlogin"
+                BackgroundColor="#006EA8"
+                BorderColor="#46718c"
+                BorderWidth="0.1"
+                CornerRadius="62"
+                FontSize="Large"
+                HeightRequest="64"
+                IsEnabled="False"
+                Text="Entrar"
+                TextColor="WhiteSmoke" />
+            <Label
+                Margin="0.12"
+                Text="Declaración de Privacidad"
+                TextColor="#74469d"
+                TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
 
-    </StackLayout>
+        </StackLayout>
 
     </ScrollView>
 
