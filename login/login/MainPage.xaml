@@ -73,7 +73,7 @@
                     Placeholder="Contraseña"
                     TextChanged="EntryTextChanged"
                     Unfocused="Entry_Unfocused_2" />
-            </Grid>a
+            </Grid>
             <Label
                 Padding="0.10"
                 HorizontalOptions="End"
