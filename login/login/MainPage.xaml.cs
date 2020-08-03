@@ -62,9 +62,12 @@ namespace login
         // asignando la cantidad d caracteres
         private bool ValidateField(string field) => !string.IsNullOrWhiteSpace(field) && field.Trim().Length >= 5;
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e) => Xamarin.Essentials.Browser.OpenAsync("https//www.google.com");
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e) => Xamarin.Essentials.Browser.OpenAsync("https://www.google.com");
 
-
+        private void buttonlogin_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new Page());
+        }
     }
 
 }

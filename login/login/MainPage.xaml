@@ -6,6 +6,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     BackgroundColor="#F8F9F9"
+    NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -24,6 +25,7 @@
             Spacing="12"
             VerticalOptions="Center">
             <!--  Place new controls here  -->
+
             <Label
                 Margin="0,0,0,24"
                 FontSize="60"
@@ -71,7 +73,7 @@
                     Placeholder="Contraseña"
                     TextChanged="EntryTextChanged"
                     Unfocused="Entry_Unfocused_2" />
-            </Grid>
+            </Grid>a
             <Label
                 Padding="0.10"
                 HorizontalOptions="End"
@@ -81,6 +83,7 @@
                 BackgroundColor="#006EA8"
                 BorderColor="#46718c"
                 BorderWidth="0.1"
+                Clicked="buttonlogin_Clicked"
                 CornerRadius="62"
                 FontSize="Large"
                 HeightRequest="64"
@@ -93,7 +96,7 @@
                 TextColor="#74469d"
                 TextDecorations="Underline">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>
             </Label>
 

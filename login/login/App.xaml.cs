@@ -11,7 +11,7 @@ namespace login
             InitializeComponent();
             Device.SetFlags(new[] { "Shapes_Experimental"});
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
