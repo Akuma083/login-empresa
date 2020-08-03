@@ -24,7 +24,7 @@
             Padding="28.0"
             Spacing="12"
             VerticalOptions="Center">
-            <!--  Place new controls here  -->
+            
 
             <Label
                 Margin="0,0,0,24"
